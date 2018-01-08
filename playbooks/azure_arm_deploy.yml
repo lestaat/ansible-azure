@@ -5,7 +5,6 @@
   tasks:
     - name: Create Azure Deploy
       azure_rm_deployment:
-        subscription_id: 48c1110e-fd71-4d86-ae3f-2ea0b8ec700d
         state: present
         resource_group_name: matiTest
         parameters:
