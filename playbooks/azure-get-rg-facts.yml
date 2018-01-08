@@ -5,4 +5,4 @@
   tasks:
     - name: Get facts for one resource group
       azure_rm_resourcegroup_facts:
-      name: LinuxTest
+      name: tenant2-usnc
