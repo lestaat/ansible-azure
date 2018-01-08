@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Power Off
+      azure_rm_virtualmachine:
+        resource_group: aleTest
+        name: AleTestma
+        restarted: yes
