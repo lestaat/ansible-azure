@@ -2,10 +2,12 @@
 - hosts: localhost
   connection: local
   gather_facts: yes
-  remote_user: awx
   tasks:
     - name: Run Cli
       shell: >
+           uname -n 
+           id
+           pwd
            az login --service-principal
            -u `awk -F= '$1=="AZURE_CLIENT_ID" {print $NF}' ~/.si2`
            -p `awk -F= '$1=="AZURE_SECRET" {print $NF}' ~/.si2`
