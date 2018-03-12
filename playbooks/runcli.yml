@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: yes
+  tasks:
+    - name: Run Cli
+      shell: az group list -o table
+      register: azlist
+
+    - name: Debug
+      debug:
+        msg: "{{ azlist }}"
+
+      
