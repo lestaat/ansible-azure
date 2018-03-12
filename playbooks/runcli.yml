@@ -4,15 +4,13 @@
   gather_facts: yes
   tasks:
     - name: Run Cli
-      shell: | 
-           az login --service-principal 
-           -u $(awk -F= '$1=="AZURE_CLIENT_ID" {print $NF}' .si2)
-           -p $(awk -F= '$1=="AZURE_SECRET" {print $NF}' .si2)
-           --tenant $(awk -F= '$1=="AZURE_TENANT" {print $NF}' .si2) && az group list -o table
+      shell: >
+           az login --service-principal
+           -u `awk -F= '$1=="AZURE_CLIENT_ID" {print $NF}' ~/.si2`
+           -p `awk -F= '$1=="AZURE_SECRET" {print $NF}' ~/.si2`
+           --tenant `awk -F= '$1=="AZURE_TENANT" {print $NF}' ~/.si2` && az group list -o table
       register: azlist
 
     - name: Debug
       debug:
         msg: "{{ azlist }}"
-
-      
