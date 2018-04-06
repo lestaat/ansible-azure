@@ -1,7 +1,5 @@
 ---
-- hosts: localhost
-  connection: ssh
-  gather_facts: yes
+- gather_facts: yes
   tasks:
     - name: Run inside
       shell: cat /var/lib/awx/.si2
