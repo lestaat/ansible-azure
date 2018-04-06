@@ -1,5 +1,6 @@
 ---
-- gather_facts: yes
+- hosts: 10.246.248.13
+  gather_facts: yes
   tasks:
     - name: Run inside
       shell: cat /var/lib/awx/.si2
