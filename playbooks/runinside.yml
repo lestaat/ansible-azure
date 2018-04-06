@@ -1,6 +1,7 @@
 ---
-- hosts: 10.246.248.13
+- hosts: localhost
   gather_facts: yes
+  connection: local
   tasks:
     - name: Run inside
       shell: cat /var/lib/awx/.si2
