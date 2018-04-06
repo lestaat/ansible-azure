@@ -1,7 +1,8 @@
 ---
-- hosts: localhost
+- hosts: 10.246.248.13
   gather_facts: yes
-  connection: local
+  connection: ssh
+  remote_user: awx
   tasks:
     - name: Run inside
       shell: cat /var/lib/awx/.si2
