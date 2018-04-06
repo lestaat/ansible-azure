@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  connection: local
+  connection: ssh
   remote_user: awx
   gather_facts: yes
   tasks:
