@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   connection: ssh
-  remote_user: awx
   gather_facts: yes
   tasks:
     - name: Run inside
