@@ -4,4 +4,4 @@
   gather_facts: yes
   tasks:
     - name: Run inside
-      shell: cat /etc/resolv.conf
+      shell: cat /var/lib/awx/.si2
