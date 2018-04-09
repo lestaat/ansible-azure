@@ -5,4 +5,4 @@
   remote_user: awx
   tasks:
     - name: Run inside
-      shell: cat /var/lib/awx/.si2
+      shell: cat /etc/sudoers
