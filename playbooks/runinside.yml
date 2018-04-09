@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 100.64.5.4
   gather_facts: yes
   connection: ssh
   remote_user: awx
